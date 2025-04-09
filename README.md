@@ -50,18 +50,23 @@ The application provides REST APIs to view reward points **per customer, per mon
 src
 ├── main
 │   ├── java
-│   │   └── com.example.rewards
+│   │   └── com.rewards
+│   │       ├── config         
+│               └── DataLoader     --> Data load to the database
 │   │       ├── controller         --> REST API Controller
 │   │       ├── service            --> Business logic for rewards
+│               └── impl           --> Service Implementation
 │   │       ├── repository         --> JPA Repositories
 │   │       ├── entity             --> Customer & Transaction models
 │   │       └── exception          --> Global exception handling
 │   └── resources
-│       └── application.properties
+│       └── application.properties --> configuration settings(application, including database connection details)
 │
 ├── test
 │   └── java
-│       └── com.example.rewards
+│       └── com.rewards
+│           └── SpringBootTest     --> Integration test class.
+│           └── repository         --> Unit tests for repository
 │           └── service            --> Unit tests for RewardService
 ```
 
@@ -124,7 +129,7 @@ Returns a JSON map of customer reward points broken down by month and total.
 
 
 ## 📘 JavaDocs
-All service methods and classes are documented with JavaDocs for better clarity and maintainability.
+All classes are documented with JavaDocs for better clarity and maintainability.
 
 ---
 
