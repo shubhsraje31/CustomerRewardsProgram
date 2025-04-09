@@ -1,8 +1,5 @@
 package com.rewards;
 
-import com.rewards.entities.Transaction;
-import com.rewards.repository.CustomerRepository;
-import com.rewards.repository.TransactionRepository;
 import com.rewards.service.impl.RewardServiceImpl;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -11,23 +8,18 @@ import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 
 import java.math.BigDecimal;
-import java.time.LocalDate;
-import java.util.Collections;
-import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.mockito.Mockito.when;
 
+/**
+ * Unit test class for {link RewardService}.
+ *
+ * Tests the reward points calculation logic.
+ */
 class RewardServiceImplTest {
 
     @InjectMocks
     private RewardServiceImpl rewardService;
-
-    @Mock
-    private TransactionRepository transactionRepository;
-
-    @Mock
-    private CustomerRepository customerRepository;
 
     @BeforeEach
     void setUp() {

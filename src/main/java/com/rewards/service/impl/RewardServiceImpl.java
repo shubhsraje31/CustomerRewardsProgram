@@ -16,6 +16,9 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
+/*
+RewardService class Implementation.
+ */
 @Service
 public class RewardServiceImpl implements RewardService {
 
@@ -72,10 +75,10 @@ public class RewardServiceImpl implements RewardService {
                 .collect(Collectors.toMap(Customer::getId, Customer::getName));
 
         if (customerMap.isEmpty()) {
-            throw new RuntimeException("No customers found in the database.");
+            throw new RuntimeException("No customer found in the database with the CustomerId: " + customerId);
         }
         if (transactions.isEmpty()) {
-            throw new RuntimeException("No transactions found in the database.");
+            throw new RuntimeException("No transactions found in the database for the CustomerId: " + customerId);
         }
 
         Map<String, Map<String, Integer>> result = new LinkedHashMap<>();

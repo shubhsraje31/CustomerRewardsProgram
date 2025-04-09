@@ -9,6 +9,13 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.Map;
 
+/**
+ * REST controller for handling reward-related endpoints.
+ *
+ * Exposes APIs to:
+ * - Get reward summary for all customers
+ * * - Get reward summary for specific customer
+ */
 @RestController
 @RequestMapping("/rewards")
 public class RewardController {

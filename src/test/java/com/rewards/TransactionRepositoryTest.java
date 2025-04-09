@@ -13,6 +13,11 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+/**
+ * Unit test class for {link TransactionRepository}.
+ *
+ * Tests the transaction repository methods.
+ */
 public class TransactionRepositoryTest {
     @Mock
     private TransactionRepository transactionRepository;
@@ -21,8 +26,7 @@ public class TransactionRepositoryTest {
     void setUp() {
         MockitoAnnotations.openMocks(this);
     }
-    // Add your test methods here
-    // Example test method
+
      @Test
      void testFindByTransactionDateBetween() {
          LocalDate startDate = LocalDate.now().minusDays(30);

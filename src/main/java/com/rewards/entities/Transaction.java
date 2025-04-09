@@ -9,6 +9,12 @@ import lombok.*;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 
+/**
+ * Entity representing a transaction made by a customer.
+ *
+ * Maps to the `transaction` table and includes transaction amount
+ * and date details.
+ */
 @ToString
 @Getter
 @Setter

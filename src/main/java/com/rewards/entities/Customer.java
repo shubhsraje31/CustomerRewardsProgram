@@ -6,6 +6,11 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import lombok.*;
 
+/**
+ * Entity representing a customer in the system.
+ *
+ * Maps to the `customer` table in the database.
+ */
 @ToString
 @Getter
 @Setter
