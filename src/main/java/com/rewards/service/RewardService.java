@@ -10,6 +10,8 @@ import java.util.stream.Collectors;
 public interface RewardService {
     Map<String, Map<String, Integer>> getCustomerMonthlyRewards();
 
+    Map<String, Map<String, Integer>> getCustomerMonthlyRewardsById(long customerId);
+
     int calculatePoints(BigDecimal amount);
 
 }
